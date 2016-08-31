@@ -3,8 +3,8 @@ package main
 
 import (
 	"fmt"
-	"runtime"
-	"reflect"
+	// "runtime"
+	// "reflect"
 )
 
 // Alternate way to declare global variables
@@ -18,14 +18,29 @@ func main() {
 	// All variables declared like this have to be used once, if inside a function
 	// They can only be declared like this inside a funciton
 	name := "Robert"
-	// course := "Docker Deep Dive"
-	module := 3.2
+	course := "Docker Deep Dive"
+	// module := 3.2
 
+	fmt.Println("\nHi", name, "you're currently watching", course)
 
-	fmt.Println("Hello, world.\n" + runtime.GOOS)
-	fmt.Println("Name is set to", name, "and is of the type", reflect.TypeOf(name))
-	fmt.Println("Module is set to", module, "and it is of type", reflect.TypeOf(module))
+	changeCourse(course)
 
-	// Pointers in GoLang
-	fmt.Println("The memory adress of module is", &module)
+	fmt.Println("\nYou are now watching course", course)
+
+// 	fmt.Println("Hello, world.\n" + runtime.GOOS)
+// 	fmt.Println("Name is set to", name, "and is of the type", reflect.TypeOf(name))
+// 	fmt.Println("Module is set to", module, "and it is of type", reflect.TypeOf(module))
+
+// 	// Pointers in GoLang
+// 	fmt.Println("The memory adress of module is", &module)
+}
+
+// Returns a string
+func changeCourse(course string) string {
+	course = "First Look: Native Docker Clustering"
+
+	fmt.Println("\nTrying to change your course to", course)
+
+	return course
+
 }
