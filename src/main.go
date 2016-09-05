@@ -4,15 +4,15 @@ package main
 import (
 	"fmt"
 	// "os"
-	// "runtime"
-	// "reflect"
+	"runtime"
+	"reflect"
 )
 
 // Alternate way to declare global variables
-// var (
-// 	name, course string
-// 	module		 float64
-// )
+var (
+	name, course string
+	module		 float64
+)
 
 func main() {
 
@@ -22,22 +22,22 @@ func main() {
 
 	// All variables declared like this have to be used once, if inside a function
 	// They can only be declared like this inside a funciton
-	// name := os.Get
-	// course := "Docker Deep Dive"
-	// // module := 3.2
+	name := "Robert"
+	course := "Docker Deep Dive"
+	// module := 3.2
 
-	// fmt.Println("\nHi", name, "you're currently watching", course)
+	fmt.Println("\nHi", name, "you're currently watching", course)
 
-	// changeCourse(course)
+	changeCourse(course)
 
-	// fmt.Println("\nYou are now watching course", course)
+	fmt.Println("\nYou are now watching course", course)
 
-// 	fmt.Println("Hello, world.\n" + runtime.GOOS)
-// 	fmt.Println("Name is set to", name, "and is of the type", reflect.TypeOf(name))
-// 	fmt.Println("Module is set to", module, "and it is of type", reflect.TypeOf(module))
+	fmt.Println("Hello, world.\n" + runtime.GOOS)
+	fmt.Println("Name is set to", name, "and is of the type", reflect.TypeOf(name))
+	fmt.Println("Module is set to", module, "and it is of type", reflect.TypeOf(module))
 
-// 	// Pointers in GoLang
-// 	fmt.Println("The memory adress of module is", &module)
+	// Pointers in GoLang
+	fmt.Println("The memory adress of module is", &module)
 }
 
 // Returns a string
